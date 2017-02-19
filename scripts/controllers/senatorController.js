@@ -4,6 +4,8 @@ angular.module('electionsApp')
         $scope.candidateList = dataFactory.getSenators($scope.formData.batch);
         $scope.candidateList.shuffle();
 
+        var nextState = $state.current.nextState;
+
         // Setup the way the candidates will be displayed
         if ($scope.candidateList.length >= 3) {
             $scope.candidateClass = 'col-sm-3';
@@ -16,10 +18,10 @@ angular.module('electionsApp')
         // Skip this step if there are no items in the list
         if ( !$scope.candidateList || $scope.candidateList.length === 0) {
             // Set the next state
-            localStorageService.set('nextState', 'submit');
+            localStorageService.set('nextState', nextState);
 
             // Redirect to president
-            $state.go('form.submit');
+            $state.go('form.' + nextState);
         }
 
         // Process the submit request
@@ -63,9 +65,9 @@ angular.module('electionsApp')
             }
 
             // Set the next state
-            localStorageService.set('nextState', 'submit');
+            localStorageService.set('nextState', nextState);
 
             // Redirect to president
-            $state.go('form.submit');
+            $state.go('form.' + nextState);
         };
     });

@@ -79,6 +79,16 @@ angular.module('electionsApp')
         stateName: 'senator',
         stateCode: ++stateIndex,
         controller: 'senatorController',
+        nextState: 'games',
+        onEnter: checkLogin
+    })
+    .state('form.games', {
+        url: '/games',
+        templateUrl: 'partials/form-executive.html',
+        controller: 'executiveController',
+        stateCode: ++stateIndex,
+        stateName: 'games',
+        nextState: 'submit',
         onEnter: checkLogin
     })
     .state('form.submit', {
@@ -98,13 +108,13 @@ angular.module('electionsApp')
 
         // The list of gensecs
         exports.gensecs = [
-            { 'id': 101, 'name': 'Nikhil Srivastava', 'position': 'president', 'image': 'assets/1.jpg' },
-            { 'id': 102, 'name': 'Deepali Gupta', 'position': 'president', 'image': 'assets/2.jpg' }
+            { 'id': 101, 'name': 'Nikhil Srivastava', 'position': 'games', 'image': 'assets/1.jpg' },
+            { 'id': 102, 'name': 'Deepali Gupta', 'position': 'games', 'image': 'assets/2.jpg' }
         ];
 
         // Full names of posts
         exports.fullPostNames = {
-            'president' : 'General Secretary, Games and Sports'
+            'games' : 'General Secretary, Games and Sports'
         };
 
         // List of senators
