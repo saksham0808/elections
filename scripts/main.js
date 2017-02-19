@@ -90,52 +90,6 @@ angular.module('electionsApp')
         onEnter: checkLogin
     });
 
-    //.state('form.president', {
-        //url: '/president',
-        //templateUrl: 'partials/form-executive.html',
-        //controller: 'executiveController',
-        //stateCode: ++stateIndex,
-        //stateName: 'president',
-        //nextState: 'games',
-        //onEnter: checkLogin
-    //})
-    //.state('form.games', {
-        //url: '/games',
-        //templateUrl: 'partials/form-executive.html',
-        //controller: 'executiveController',
-        //stateCode: ++stateIndex,
-        //stateName: 'games',
-        //nextState: 'cultural',
-        //onEnter: checkLogin
-    //})
-    //.state('form.cultural', {
-        //url: '/cultural',
-        //templateUrl: 'partials/form-executive.html',
-        //controller: 'executiveController',
-        //stateCode: ++stateIndex,
-        //stateName: 'cultural',
-        //nextState: 'science',
-        //onEnter: checkLogin
-    //})
-    //.state('form.science', {
-        //url: '/science',
-        //templateUrl: 'partials/form-executive.html',
-        //controller: 'executiveController',
-        //stateCode: ++stateIndex,
-        //stateName: 'science',
-        //nextState: 'films',
-        //onEnter: checkLogin
-    //})
-    //.state('form.films', {
-        //url: '/films',
-        //templateUrl: 'partials/form-executive.html',
-        //controller: 'executiveController',
-        //stateCode: ++stateIndex,
-        //stateName: 'films',
-        //nextState: 'submit',
-        //onEnter: checkLogin
-    //})
-
 });
 
 angular.module('electionsApp')
@@ -144,48 +98,37 @@ angular.module('electionsApp')
 
         // The list of gensecs
         exports.gensecs = [
+            { 'id': 101, 'name': 'Nikhil Srivastava', 'position': 'president', 'image': 'assets/1.jpg' },
+            { 'id': 102, 'name': 'Deepali Gupta', 'position': 'president', 'image': 'assets/2.jpg' }
         ];
+
+        // Full names of posts
+        exports.fullPostNames = {
+            'president' : 'General Secretary, Games and Sports'
+        };
 
         // List of senators
         exports.senators = {
-            //'UG, Y15': [
-                //{ 'id': 1, 'name': 'Mugdha Arora', 'image': 'assets/ma.jpg' },
-                //{ 'id': 2, 'name': 'Kshitij Jaiswal', 'image': 'assets/kj.jpg' },
-                //{ 'id': 3, 'name': 'Himanshu Panwar', 'image': 'assets/hp.jpeg' },
-                //{ 'id': 4, 'name': 'Swastid Sharma', 'image': 'assets/ss.jpg' },
-                //{ 'id': 5, 'name': 'Shivam Gupta', 'image': 'assets/sg.jpg' },
-                //{ 'id': 6, 'name': 'Siddhant Suhas Naik', 'image': 'assets/ssn.jpg' },
-                //{ 'id': 7, 'name': 'Akarsh Gajbhiye', 'image': 'assets/ag.jpg' },
-            //]
-            'Mathematics': [
-                {'id': 1, 'name': 'Nakul Surana', 'image': 'assets/13418.jpg'},
-                {'id': 2, 'name': 'Sparsh Grover', 'image': 'assets/13711.jpg'},
-                {'id': 3, 'name': 'Praharsh Mohanlal Patel', 'image': 'assets/151060.jpg'}
+            'BT/BS Y14': [
+            { 'id': 3, 'name': 'Bhanu Garg', 'image': 'assets/3.jpg' },
+            { 'id': 4, 'name': 'Mandeep Singh', 'image': 'assets/4.jpg' },
+            { 'id': 5, 'name': 'Ayushya Agarwal', 'image': 'assets/5.jpg' },
+            { 'id': 6, 'name': 'Shantanu Suman', 'image': 'assets/6.jpg' }
             ],
-            'Chemical': [
-                {'id': 11, 'name': 'Prasoon Srivastava', 'image': 'assets/12506.jpg'},
-                {'id': 12, 'name': 'Manish MArkand Kapgate', 'image': 'assets/13382.jpg'},
-                {'id': 13, 'name': 'Meenakshi shandilya', 'image': 'assets/13402.jpg'}
+            'BT/BS Y15': [
+            { 'id': 7, 'name': 'Mayank Chauhan', 'image': 'assets/7.jpg' },
+            { 'id': 8, 'name': 'Harsh Narang', 'image': 'assets/8.jpg' },
+            { 'id': 9, 'name': 'Anshul Goel', 'image': 'assets/9.jpg' }
             ],
-            'Civil': [
-                {'id': 21, 'name': 'Adarsh Kabra', 'image': 'assets/13039.jpg'},
-                {'id': 22, 'name': 'Priya Yadav', 'image': 'assets/13512.jpg'},
-                {'id': 23, 'name': 'Salik Naqueeb Abbasi', 'image': 'assets/13605.jpg'}
-            ],
-            'Mechanical': [
-                {'id':31, 'name': 'Asheesh Kumar', 'image': 'assets/13153.jpg'},
-                {'id': 32, 'name': 'Ryan Pal', 'image': 'assets/13592.jpg'},
-                {'id': 33, 'name': 'Ankur Maurya', 'image': 'assets/151060.png'}
-            ],
-            'OTHERS': []
-
+            'Executive': [
+            ]
         };
 
         // Settings for the application
         exports.settings = {
-            'mainPassword': 'LetsVote',
-            'cancelPassword': 'CancelThisVote',
-            'adminPassword': 'IAmGod'
+            'mainPassword': 'abcdd',
+            'cancelPassword': 'abcdd',
+            'adminPassword': 'asdasd'
         };
 
         // total Number of states
